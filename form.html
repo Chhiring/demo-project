@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- initial zoom to zero for responsive design-->
+    <meta name="description" content="form design" /><!-- defines keyword for search engine-->
+    <meta name="keywords" content="" />
+    <meta name="author" content="CG" /><!-- defines author of webpage-->
+    <meta http-equiv="refresh" content="60" /> <!-- refresh page every 60 second-->
+    <link rel="icon" href="https://maxcdn.icons8.com/Android_L/PNG/24/User_Interface/form-24.png" type="image/x-icon" />
+    <title>form design</title>
+</head>
+<body>
+    <form action="" method="post" autocomplete="on" formtarget="_blank">
+        <fieldset>
+            <legend>Sign Up:</legend>
+            First name:
+            <input type="text" name="firstname" value="" placeholder="firstname" size="15" autofocus required /><br>
+            Last name:
+            <input type="text" name="lastname" value="" placeholder="lastname" size="15" required /><br>
+            Gender : <input type="radio" name="gender" value="male" checked />male
+                     <input type="radio" name="gender" value="female" />female
+                     <input type="radio" name="gender" value="other" />Other<br />
+            Email: <input type="email" name="email" value="" placeholder="email" autocomplete="off" required /><br />
+            Date of birth: <input type="date" name="dob" min="1980-01-01" max="2017-05-18" required /><br />
+            Select zone:<input type="number" name="zone" min="1" max="10" required /><br />
+            Select subzone:<input type="range" name="subzone" min="1" max="10" required /><br />
+            Contact : <input type="tel" name="usrtel" /><br />
+            Public Profile link:<input type="url" name="usrprflurl" /><br />
+            Street Address:
+            <input type="text" name="address" value="" placeholder="Stress Address" required/><br />
+            
+            City :
+            <input type="text" name="city" value="" required /><br />
+            State: 
+            <select name="states" required>
+                <option value="FL">AL</option>
+                <option value="FL">FL</option>
+                <option value="FL">NY</option>
+                <option value="FL">VA</option>
+                <option value="FL">TX</option>
+                <option value="FL">CA</option>
+            </select><br />
+            Country:
+            <input list="Country" required>
+            <datalist id="Country">
+                <option value="Nepal">
+                <option value="India">
+                <option value="China">
+                <option value="United States Emirates">
+                <option value="United States of America">
+            </datalist> <br />
+            <input type="checkbox" name="notification" value="want email notication " />
+            want us to send email notification about new updates.
+            <br /><input type="button" value="Sign Up" >
+            <input type="reset" name="reset" value="Reset" />
+        </fieldset>
+     </form>
+    <form action="" method="post">
+        <fieldset>
+            <legend>LogIn</legend>
+            <label>Username:</label>
+            <input type="text" name="username" placeholder="username" value="" /><br />
+            <label>Password:</label>
+            <input type="password" name="pwd" placeholder="password" value="" /><br />
+            <input type="submit" name="log In" value="Log In" />
+        </fieldset>
+    </form>
+    <form action="" method="get" formtarget="_self">
+        <input type="search" name="search" value=" " placeholder="search" />
+        <input type="submit" name="search" value="search" />
+    </form>
+</body>
+</html>

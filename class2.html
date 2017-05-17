@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- initial zoom to zero for responsive design-->
+    <meta name="description" content="Create new website" /><!-- defines keyword for search engine-->
+    <meta name="keywords" content="" />
+    <meta name="author" content="CG" /><!-- defines author of webpage-->
+    <meta http-equiv="refresh" content="60" /> <!-- refresh page every 60 second-->
+    <link rel="icon" href="https://maxcdn.icons8.com/iOS7/PNG/25/Plants/hand_planting-25.png" type="image/x-icon"/>
+    <title>Simple webpage</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <style>
+        article {
+           width:90%;
+           float:left;
+            
+        }
+       footer{
+           float:left;
+             }
+        owntag { 
+            // style for our own tag;
+            display: block;
+            background-color: #dddddd;
+            font-size: 30px;
+            font-family:'Microsoft Yi Baiti';
+        }
+        
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            display:inline;
+        }
+        
+     
+    </style>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+          });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx74VBBdba5LllK_bvT3o2MoUemHN7bWQ&callback=initMap">
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="background-color:black; color:white; text-align:center;">Learning from Mr.Friedman's book</h1>
+    </header>
+    <article>
+        <ol type="1">
+            <li>
+                <section>
+                    <h1 style="color:darkred"> What is the difference between a connected world and a <span>hyper</span> connected world? </h1>
+                    <blockquote>
+                        <em>Communication</em> is essential part of human being and we had always found ways
+                        to keep <strong>connected</strong>. Earlier we used to communicate each other either using a paper or other
+                        way that takes longer time. We used to have newspaper, TV, Radio to know the latest news.
+                        We used to travel through bus train which takes long time to travel some place. We used to
+                        sit on long line to get a ticket of Cinemas, Plane, etc. At that time we really face the
+                        problem of big world. It is very difficult to communicate with other people of very far
+                        country.  At that time the distance matters in everything what we did. But still we are
+                        connected.But now we can communicate with other people all over the world within a few
+                        seconds using web enabled smartphones. We can update the current situation so that everybody
+                        around the world knows us. We have bullet train which can travel faster, a few miles within
+                        a few seconds. Now people around the world can compete with each other in an easy way. Now
+                        really distance doesn’t matter. Now world is become like a single home. We have a social
+                        media for communication which helps to communicate people of America to people of Nepal
+                        with in a seconds. This world is a hyper connected world. People do conversation like
+                        they are standing next to each other through video call which is all possible through web.
+                        For study we must be to school and sit inside the four wall compound class and get lecture
+                        from professor but now it is not necessary to be at school to study. Student can sit at home
+                        and take online classes. This is the main difference between connected world and a hyper
+                        connected world.
+                    </blockquote>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h1 style="color:darkred">
+                        What does Mr. Friedman mean by saying employee critical thinking and problem solving skills now are considered routine?
+                    </h1>
+                    <blockquote>
+                        Mr. Friedman in his speech he said employee critical thinking and problem solving
+                        skills now are considered routine. Basically he meant to say is that for any business
+                        organization; they want to hire the non-routine employers. Our labor force is of three types;
+                        top tire they are scientist, doctors, engineers etc., which is non routine. Second tire is
+                        routine work which means these work can be easily outsourced digitized, automated. There is
+                        \only high wage on high skill jobs but no high wage on middle skilled job. And the third tire
+                        is non routine and local like butcher, baker, divorce lawyer etc. Whatever the work we do we
+                        need to be creative so we can accomplish the work and solve the problem in a unique way which
+                        is different than others. As we know we have entered into hyper connected world from connected
+                        world. Hyper connectivity helps the non-routine employers to be more creative and these
+                        employers need to be hired who really can solve the problem uniquely and have the critical
+                        thinking capacity. For example if I am a programmer I need to be creative programmer. Those
+                        creative employers are only the demand of today’s competitive business organization.
+                    </blockquote>
+                </section>
+            </li>
+        </ol>
+    </article>
+    <aside>
+        <img src="http://www.slate.com/content/dam/slate/articles/arts/books/2017/01/170113_BOOKS_Tom-Friedman.jpg.CROP.promo-xlarge2.jpg"
+             alt = "Mr.fredman" widht="60" height="60" />
+        <p>
+            hey are you there! wanna read more <a href="https://www.w3schools.com">Click Me</a>
+        </p>
+    </aside>
+    <section>
+        <table style="width:100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+    </section>
+    <iframe src="https://www.youtube.com/embed/314m7YBRFvQ?autoplay=0&loop=1" frameborder="0" allowfullscreen
+            width="500px" height="500px"></iframe>
+    <div id="map" style="width:350px; height:480px; float:right;"></div>
+   
+    <owntag><!-- demo of creating our own tag-->
+        <i>This is my own tag</i>
+    </owntag>
+    <video><!-- for video play and its control-->
+
+    </video>
+    <footer>
+        <pre>
+        &copy; 2017
+        Powered by C.G.
+        </pre>
+    </footer>
+</body>
+</html>

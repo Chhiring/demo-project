@@ -1,0 +1,23 @@
+﻿body {
+   width:80%;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top: 1%;
+}
+div {
+    padding:1% 10%;
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a:link {
+    color: red;
+}
+a:visited{
+    color : rosybrown;
+}
+header>h1{
+    text-align:center;
+}
+.assignment {
+    float: right;
+}
